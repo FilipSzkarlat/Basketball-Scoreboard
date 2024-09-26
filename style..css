@@ -11,20 +11,29 @@
 
 body {
   background-color: #1b244a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   color: #eeeeee;
+  background-image: url(basketball.avif);
+  background-size: cover;
+  padding: 30px 100px;
+  text-shadow: 0 0 1px black;
 }
 
 .score-boards {
   display: flex;
   width: 100%;
+  gap: 100px;
   justify-content: space-around;
+  opacity: 0.9;
 }
 
 h3 {
@@ -35,6 +44,13 @@ h3 {
 .home-container,
 .guest-container {
   text-align: center;
+}
+
+.home-container h3,
+.guest-container h3 {
+  background-color: #302726;
+  border-radius: 10px;
+  opacity: 0.8;
 }
 
 .scoreHome,
@@ -59,7 +75,8 @@ h3 {
 
 button {
   font-family: cursed-timer;
-  background-color: transparent;
+  background-color: #302726;
+  opacity: 0.8;
   border: solid 1px #9aabd8;
   color: #9aabd8;
   padding: 10px;
@@ -75,11 +92,26 @@ button:hover {
 }
 
 .new-btn {
-  justify-self: end;
-  position: relative;
-  top: 150px;
+  margin: 50px 0;
+  padding: 10px 20px;
 }
 
 .highlight {
-  border: 2px solid green;
+  border: 5px solid green;
+}
+
+.hidden {
+  display: none;
+}
+
+.last-game {
+  margin-top: 50px;
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  bottom: 50px;
+  background-color: black;
+  padding: 20px 40px;
+  border-radius: 15px;
+  opacity: 0.7;
 }

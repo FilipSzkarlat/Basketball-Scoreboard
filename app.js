@@ -8,6 +8,9 @@ const scoreHomeEL = document.querySelector(".scoreHome");
 const scoreGuestEL = document.querySelector(".scoreGuest");
 const newBtn = document.querySelector(".new-btn");
 let scoreHome = 0;
+const lastGame = document.querySelector(".last-game");
+const homeLastGameScore = document.querySelector(".home-last-game");
+const guestLastGameScore = document.querySelector(".guest-last-game");
 let scoreGuest = 0;
 
 OneForHomeEl.addEventListener("click", function () {
@@ -47,11 +50,14 @@ ThreeForGuestEl.addEventListener("click", function () {
 });
 
 newBtn.addEventListener("click", function () {
+  homeLastGameScore.textContent = scoreHome;
+  guestLastGameScore.textContent = scoreGuest;
   scoreGuest = 0;
   scoreHome = 0;
   scoreGuestEL.textContent = scoreGuest;
   scoreHomeEL.textContent = scoreHome;
   checkTheLeader();
+  lastGame.classList.remove("hidden");
 });
 
 function checkTheLeader() {
